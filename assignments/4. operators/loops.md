@@ -13,16 +13,38 @@ const ACCESSORY_PRICE = 9.99;
 
 var bank_balance = 303.91;
 var amount = 0;
+
+while(amount < bank_balance){
+    amount = amount + PHONE_PRICE;
+        if(amount < SPENDING_THRESHOLD){
+            amount = amount + ACCESSORY_PRICE;
+        }
+    amount = amount + (amount * TAX_RATE);
+    alert(`Calculated purchase amount is ${amount}`); 
+}
 // your code goes here
 ```
  ⛑ Answer of the above will `$334.76`.
 
 2. 🎖 Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen using `alert` (e.g. "2 is even").
 ```js
+for(let i=0; i<20; i++){
+    if (i%2 == 0){
+        alert('Number is even')
+    }else{
+        alert('Number is odd');
+    }
+}
 // your code goes here
 ```
 
 3. 🎖Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result in console (e.g. "2 * 9 = 18").
+
+for(let i=0; i < 10; i++){
+    if( i * 9){
+        console.log(`${i} * 9 = ${i}`);
+    }
+}
 
 4. 🎖Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 (e.g.
@@ -32,20 +54,46 @@ var amount = 0;
 "1 * 4 = 4"
 .... for all 100 results)
 
+````
+for(let i = 1; i <=10; i++){
+    for(let k=1; i<=10; k++){
+        console.log(`${i} * ${j} = ${i}*${j}`);
+    }
+}
+````
+
 5. 🎖Show the following output using one loop.
 ```js
 // 1, 2, 3, 4, 5
 // 6, 7, 8, 9, 10
-
+var sameline = ",";
+for(var i=1; i<11; i++){
+    if(i==5){
+        sameline = sameline+i+"\n";
+    }else{
+        sameline = sameline+i+",";
+    }
+}
+console.log(sameline);
 // Your code goes here
 ```
 
 6. 🎖Use a while loop to add up the numbers 1 to 20.
 ```js
+let sum;
+while(i < 21){
+    sum += i;
+}
+alert(sum);
 // Your code goes here
 ```
 
 7. 🎖Use a while loop to print out the even number from 1 to 20. (You'll need Modulus for this. And an IF Statement.)
 ```js
+while( i < 21){
+    if(i % 2 == 0){
+        alert(i);
+    }
+}
 // Your code goes here
 ```

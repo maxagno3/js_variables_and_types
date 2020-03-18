@@ -6,31 +6,31 @@
 
 ```js
 true  && true; //output
-true  && false;
-false && true;
-false && false;
-"foo" && "bar";
-"bar" && "foo";
-"foo" && "";
-""    && "foo";
-" "   && "John" && "" && false
-false && "Hey" && undefined
-"undefined" && false && 42
+true  && false; //true
+false && true; //false
+false && false; //false
+"foo" && "bar"; //bar
+"bar" && "foo"; //foo
+"foo" && "";    //""
+""    && "foo"; //""
+" "   && "John" && "" && false //""
+false && "Hey" && undefined //false
+"undefined" && false && 42 // false
 ```
 
 * [ ] Logical OR operation
 ```js
-true  || true;
-true  || false;
-false || true;
-false || false;
-"foo" || "bar";
-"bar" || "foo";
-"foo" || "";
-""    || "foo";
-" "   || "John" || "" || false
-false || "Hey" || undefined
-"undefined" || false || 42
+true  || true; //true
+true  || false; //true
+false || true; //true
+false || false; //false
+"foo" || "bar"; //foo
+"bar" || "foo"; //bar
+"foo" || ""; //foo
+""    || "foo"; //foo
+" "   || "John" || "" || false //" "
+false || "Hey" || undefined //Hey
+"undefined" || false || 42 //undefined
 ```
 
 2. 🥈You have two variables i.e `isGuestOneVeg` and  `isGuestTwoVeg` according to the value using logical && and || opeartor do the following.
@@ -41,6 +41,14 @@ false || "Hey" || undefined
 ```js
 let isGuestOneVeg = false;
 let isGuestTwoVeg = false;
+
+if(isGuestOneVeg || isGuestTwoVeg){
+    alert('Only Offer up vegan dishes')
+}else if(isGuestOneVeg && isGuestTwoVeg){
+    alert('Make sure to offer up some vegan dishes')
+}else{
+    alert('Offer up anything on the menu');
+}
 // Your code goes here
 ```
 
@@ -51,10 +59,12 @@ let isGuestTwoVeg = false;
 * [ ] else 'Go for it. It is pretty nice out'
 ```js
 let temperature = 4;
+((temperature < 32) && alert('It is freezing outside')) || ((temperature > 110) && alert('It is hot outside'));
 // Your code goes here
 ```
 
 4. 🎖 Output of this and the reason behind the output.
 ```js
 alert( alert(1) || 2 || alert(3) );
+alert(1) and then 2 as || operator searches for the first truthy value and both alert(1) and alert(3) displays undefined and is returned undefined
 ```
